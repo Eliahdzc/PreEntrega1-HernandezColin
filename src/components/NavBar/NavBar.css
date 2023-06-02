@@ -1,0 +1,31 @@
+.nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 150px;
+    background-color:#E0F1E9 ;
+    justify-content: space-between;
+    border-radius: 15px;
+  }
+
+
+.barra {
+    margin: 0;
+    display: flex;
+    width: 500px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lista {
+    list-style-type: none;
+    font-size: 20px;
+    font-family: 'Fredericka the Great';
+    color: #646cff;
+    text-decoration: inherit;
+}
+
+.lista:hover {
+    color: #535bf2;
+    cursor: pointer;
+}
