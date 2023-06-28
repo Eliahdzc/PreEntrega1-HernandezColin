@@ -1,0 +1,81 @@
+.productos {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   gap: 2rem;
+   padding-block: 2rem;
+}
+
+.producto {
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+}
+
+.producto > div {
+   display: flex;
+   flex-direction: column;
+   font-family: 'Fredericka the Great';
+   color:#646cff ;
+   border-style: double;
+   border-color:#646cff  ;
+   border-bottom-left-radius: 1rem;
+   border-bottom-right-radius: 1rem;
+}
+
+.producto > img {
+   width: 100%;
+   object-fit: cover;
+   border-top-left-radius: 1rem;
+   border-top-right-radius: 1rem;
+}
+
+.boton-detalles {
+   align-content: center;
+   background-color: transparent;
+   font-family: 'Fredericka the Great';
+   color:#646cff ;
+   font-size: larger;
+   padding: .5rem;
+   border-radius: 1rem;
+   border-color: #646cff;
+   transition: .2s;
+}
+
+.boton-detalles a {
+   text-decoration: none;
+}
+
+.boton-detalles:hover {
+   background-color:#E0F1E9;
+}
+
+.boton-detalles a:visited {
+   color:#646cff ;
+}
+
+.producto-detalle {
+   padding-block: 2rem;
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   gap: 2rem;
+}
+
+.producto-detalle img {
+   width: 100%;
+}
+
+.producto-detalle-info h3 {
+   font-size: 2rem;
+}
+
+.categoria {
+   font-size: .8rem;
+   /* color: #424242; */
+   margin-top: 1rem;
+}
+
+.precio {
+   font-size: 2rem;
+   margin-top: 2rem;
+   font-weight: 600;
+}

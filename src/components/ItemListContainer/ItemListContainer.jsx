@@ -1,48 +1,38 @@
 import '../ItemListContainer/ItemListContainer.css'
-import {useState} from "react"
+import {useState, useEffect} from "react"
+import { datos } from "../../data/data"
+import ItemList from '../ItemList/ItemList'
+import Item from '../Item/Item'
+import { useParams } from 'react-router-dom'
 
 const ItemListContanier = () => {
 
-    const [nombre, setNombre] = useState("")
-    const [existeSaludo, setExisteSaludo] = useState(false)
+    const [productos, setProductos] = useState([])
 
-    const hayNombre = () => {
-        console.log('nombre', nombre)
-    }
+    const [titulo, setTitulo] = useState("Productos")
 
-    const handleChange = (event) => {
-        setNombre(event.target.value)
-    }
+    const categoria = useParams().categoria
 
+    console.log(titulo)
 
-    const validarSaludo = () => {
-        if (nombre.length > 3 && nombre !== '') {
-            setExisteSaludo(true)
-        }
-    }
+    useEffect(() => {
+        datos()
+            .then((res) => {
+                if(categoria){
+                    setProductos(res.filter((prod) => prod.categoria === categoria))
+                    setTitulo(categoria)
+                } else {
 
+                    setProductos(res)
+                    setTitulo("Productos")
+                }
+            })
+    }, [categoria])
 
 
     return (
-        <div className='contenedor'>
-            <div className='cont-login'>
-                <h1 className='titulo-1'>La Vida es Dulce</h1>
-                {!existeSaludo ?
-                    <>
-                        <h2 className='nombre'>Escribe tu Nombre</h2>
-                        <input onChange={handleChange} value={nombre} className='input-nombre' type="text" />
-                        <button className='boton' onClick={validarSaludo}>Aceptar</button>
-                    </>
-                    : null
-                }
-            </div>
-            {existeSaludo ?
-                <div className='cont-saludo'>
-                    <h2 className='saludo'>Y nos gustaría que sea aún mas dulce para ti</h2>
-                    <h2 className='saludo'>{nombre}</h2>
-                </div>
-                : null
-            }
+        <div>
+            <ItemList productos={productos} titulo={titulo} />
         </div>
     )
 }

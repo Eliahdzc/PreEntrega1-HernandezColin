@@ -6,13 +6,13 @@
     background-color:#E0F1E9 ;
     justify-content: space-between;
     border-radius: 15px;
-  }
+}
 
 
 .barra {
     margin: 0;
     display: flex;
-    width: 500px;
+    width: 800px;
     align-items: center;
     justify-content: space-between;
 }
@@ -21,7 +21,7 @@
     list-style-type: none;
     font-size: 20px;
     font-family: 'Fredericka the Great';
-    color: #646cff;
+    color:#646cff ;
     text-decoration: inherit;
 }
 

@@ -1,0 +1,71 @@
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    width: 500px;
+    height: 150px;
+}
+
+.titulo-1 {
+    text-align: center;
+    font-family: 'Grand Hotel', cursive;
+    font-size: 80px;
+    color: #646cff;
+}
+
+.nombre {
+    font-family: 'PT Sans Narrow', sans-serif;
+    text-align: center;
+    color: #646cff;
+
+}
+
+.input-nombre {
+    height: 50px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: xx-large;
+    color: #646cff;
+    border-color: #646cff;
+    background-color: #E0F1E9;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.boton {
+    margin: 10px;
+    color: #646cff;
+    border-color: #646cff;
+    background-color: #E0F1E9;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.boton:hover {
+    color: #E0F1E9;
+    cursor: pointer;
+    background-color: #535bf2;
+}
+
+.cont-saludo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.saludo {
+    text-align: center;
+    font-family: 'Grand Hotel', cursive;
+    font-size: 80px;
+    color: #646cff;
+}
