@@ -26,9 +26,9 @@ const ItemDetail = () => {
         <div className="contanier">
             {categoriaCorrecta ?
                 <div className="producto-detalle">
-                    <img src={item.imagen} alt={item.titulo} />
+                    <img src={`../${item.imagen}`} alt={item.titulo} />
                     <div>
-                        <img src={item.descripcion} alt={item.titulo} />
+                        <img src={`../${item.descripcion}`} alt={item.titulo} />
                         <p className="precio-detalle">Precio : {item.precio}</p>
                     </div>
 
