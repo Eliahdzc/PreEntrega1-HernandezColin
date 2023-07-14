@@ -27,3 +27,16 @@
 .boton-detalles a:visited {
     color:#646cff ;
 }
+
+.producto-detalle {
+    padding-block: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.container {
+    max-width: 1140px;
+    padding-inline: 1.5rem;
+    margin: 0 auto;
+}
