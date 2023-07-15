@@ -11,11 +11,12 @@ import { db } from '../../firebase/config'
 const ItemDetail = (  ) => {
     const [item, setItem] = useState({})
     const {id} = useParams()
+    console.log('id', id)
     const { carrito, agregarAlCarrito } = useContext(CartContext);
-    
+
     useEffect(() => {
-        
-        const prod = doc(db, "Productos", id) // 
+
+        const prod = doc(db, "Productos", id) //
         getDoc(prod)
         .then((resp) => {
             setItem({...resp.data()})
@@ -29,35 +30,34 @@ const ItemDetail = (  ) => {
     const handleRestar = () => {
         cantidad > 1 && setCantidad(cantidad - 1)
     }
-    
+
     const handleSumar = () => {
         cantidad <item.stock && setCantidad(cantidad + 1)
     }
-    console.log(id)
 
-  return (
-      <div className="container">
-    <div className="producto-detalle">
-    <div>
-        <h4>{item.categoria}</h4>
-    </div>
+    return (
+        <div className="container">
+            <div className="producto-detalle">
+                <div>
+                    <h4>{item.categoria}</h4>
+                </div>
 
-            <img src={`../${item.imagen}`} alt={item.titulo} />
-            <div>
-                <h3 className="titulo">{item.titulo}</h3>
-                <img src={`../${item.descripcion}`}></img>
-                <p className="categoria">Categoría: {item.categoria}</p>
-                <p className="precio">${item.precio}</p>
-                <ItemCount
-                  cantidad={cantidad}
-                  handleSumar={handleSumar}
-                  handleRestar={handleRestar}
-                  handleAgregar={() => { agregarAlCarrito(item, cantidad) }}
-                />
+                <img src={`../${item.imagen}`} alt={item.titulo} />
+                <div>
+                    <h3 className="titulo">{item.titulo}</h3>
+                    <img src={`../${item.descripcion}`}></img>
+                    <p className="categoria">Categoría: {item.categoria}</p>
+                    <p className="precio">${item.precio}</p>
+                    <ItemCount
+                    cantidad={cantidad}
+                    handleSumar={handleSumar}
+                    handleRestar={handleRestar}
+                    handleAgregar={() => { agregarAlCarrito({...item, id}, cantidad) }}
+                    />
+                </div>
             </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default ItemDetail

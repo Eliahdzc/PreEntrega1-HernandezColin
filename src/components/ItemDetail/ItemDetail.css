@@ -4,29 +4,6 @@
    font-size: larger;
 }
 
-.boton-detalles {
-    align-content: center;
-    background-color: transparent;
-    font-family: 'Fredericka the Great';
-    color:#646cff ;
-    font-size: larger;
-    padding: .5rem;
-    border-radius: 1rem;
-    border-color: #646cff;
-    transition: .2s;
-}
-
-.boton-detalles a {
-    text-decoration: none;
-}
-
-.boton-detalles:hover {
-    background-color:#E0F1E9;
-}
-
-.boton-detalles a:visited {
-    color:#646cff ;
-}
 
 .producto-detalle {
     padding-block: 2rem;

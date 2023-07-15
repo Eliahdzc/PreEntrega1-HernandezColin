@@ -49,9 +49,14 @@
    background-color:#E0F1E9;
 }
 
-.boton-detalles a:visited {
+.boton-link:visited {
    color:#646cff ;
 }
+
+.boton-link:hover {
+   color:#5cce3a;
+}
+
 
 .producto-detalle {
    padding-block: 2rem;
